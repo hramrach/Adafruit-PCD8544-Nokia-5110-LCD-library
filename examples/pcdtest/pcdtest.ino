@@ -248,12 +248,11 @@ void testdrawline() {
 void setup()   {
   Serial.begin(9600);
 
-  display.begin();
+  display.begin(0x3f /*contrast*/, 0 /*bias*/);
   // init done
 
   // you can change the contrast around to adapt the display
   // for the best viewing!
-  display.setContrast(50);
   display.setReinitInterval(10);
 
   display.display(); // show splashscreen
